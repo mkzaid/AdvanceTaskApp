@@ -1,0 +1,80 @@
+/* 
+App Header Css
+
+*/
+.app-header {
+  border-bottom: 1px solid #282c34;
+  background-color: #282c34;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  height: 10vh;
+}
+
+#logOutBtn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  height: 35px;
+  background-color: white;
+  color: #282c34;
+  font-weight: 500;
+  letter-spacing: 3px;
+}
+
+/* todoApp design */
+.todoApp {
+  /* height: 90vh; */
+  min-height: 90vh;
+  width: 100vw;
+  background-color: rgb(219, 238, 245);
+
+}
+
+.inputButtonContainer {
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+}
+
+.inputButtonContainer input {
+  border: none;
+  border-bottom: 1px solid #282c34;
+  background-color: transparent;
+  width: 50vw;
+  height: auto;
+  font-size: 25px;
+}
+
+.inputButtonContainer input:focus {
+
+  outline: none;
+
+}
+
+.inputButtonContainer button {
+  margin-top: 20px;
+  width: 100px;
+  height: 41px;
+  background-color: #282c34;
+  border: none;
+  color: white;
+  font-size: 20px;
+  letter-spacing: 1px;
+  border-radius: 25px;
+  font-weight: 100;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.inputButtonContainer button:hover {
+  width: 103px;
+  height: 44px;
+  font-size: 21px;
+  letter-spacing: 2px;
+}

@@ -1,0 +1,79 @@
+.noteContainer{
+    width: 100vw;
+    /* border: 1px solid black; */
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.task{
+    width: 75vw;
+    /* padding: 10px; */
+    min-height: 13vh;
+    background-color: rgba(246, 248, 217, 0.5);
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.lineref{
+ background-color: lightskyblue;
+ width: 3px;
+ height:13vh;
+ border-radius: 30px;
+}
+.notDone{
+    
+    background-color: lightskyblue;
+}
+.Done{
+    background-color: green;
+}
+
+.task p{
+padding: 10px;
+    display: inline-block;
+    margin-right: 30px;
+    flex-grow: 2;
+    font-size: 16px;
+    margin-left: 10px;
+}
+.btns{
+    display: flex;
+    justify-content: center;
+    /* transition: color 1s; */
+}
+.task button{
+    width: 80px;
+    height: 30px;
+    border: 0;
+    background-color: transparent;
+     font-size: 18px;
+     font-weight: 500;
+     cursor: pointer;
+
+}
+
+
+#completeBtn{
+    color: green;
+}
+#editBtn{
+    color: blue;
+    padding-left: 19px;
+}
+#delBtn{
+    color: red;
+}
+#completeBtn:hover{
+    color: #282c34;
+}
+#editBtn:hover{
+    color: #282c34;
+}
+#delBtn:hover{
+    color: #282c34;
+}
