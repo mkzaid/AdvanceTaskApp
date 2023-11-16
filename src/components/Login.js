@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { useAuth } from "../context/AuthContext";
 import { Alert } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
+import './login.css';
 const LogIn = () => {
   const emailRef = useRef();
   const passwordRef = useRef();
@@ -28,43 +29,39 @@ const LogIn = () => {
 
   return (
     <>
-     <Container 
-    className="d-flex align-items-center justify-content-center" style={{minHeight:'100vh'}}
+     <div
+    className="parentContainer" 
       >
-       <div className="w-100" style={{maxWidth:'400px'}} >
-      <Card>
+       <div>
+      <div className="Card" >
         <h3 className="text-center">Log In</h3>
 
-        <Card.Body>
-          {error && <Alert variant="danger">{error}</Alert>}
-          <Form>
-            <Form.Group id="email">
-              <Form.Label>Email</Form.Label>
-              <Form.Control type="email" ref={emailRef} required />
-            </Form.Group>
-            <Form.Group id="password">
-              <Form.Label>Password</Form.Label>
-              <Form.Control type="password" ref={passwordRef} required />
-            </Form.Group>
-          </Form>
-          <Button
+          {error && <p className="danger">{error}</p>}
+          <form>
+
+              <label>Email</label>
+              <input type="email" ref={emailRef} required />
+              <label>Password</label>
+              <input type="password" ref={passwordRef} required />
+            
+          </form>
+          <button 
             disabled={loading}
             type="submit"
-            className="w-100 mt-4"
+            className="formBtn"
             onClick={handleSubmit}
           >
             Log In
-          </Button>
-        </Card.Body>
-        <div className="text-center mt-2 mb-2 w-100">
-          {<Link to="/forget-password">Forget Password</Link>}
+          </button>
+        <div className="ancher_div" >
+          <a href="/forget-password"  >Forget Password</a>
         </div>
-      </Card>
-      <div className="text-center mt-2 w-100">
-        Need an Account ? {<Link to="/signup">Sign Up</Link>}
+      </div>
+      <div className="ancher_div">
+        Need an Account ? <a href="/signup">Sign Up</a>
       </div>
           </div>
-   </Container>
+   </div>
     </>
   );
 };

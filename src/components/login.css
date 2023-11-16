@@ -1,0 +1,52 @@
+.parentContainer{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    max-width: 100vw;
+}
+.Card{
+    border: 1px solid #a7a7a7;
+    padding: 20px;
+    border-radius: 22px;
+    margin-bottom: 10px;
+}
+form label{
+    margin:10px 0px;
+}
+form input{
+    display: block;
+    width: 355px;
+    height: 39px;
+    padding: 4px;
+    padding-left: 12px;
+    border-radius: 7px;
+    border: 1px solid #b9b9b9;
+}
+form input:focus{
+  outline: 4px solid rgba(160, 211, 228, 0.89);
+}
+
+.formBtn{
+    width: 356px;
+    text-align: center;
+    height: 40px;
+    background: #0070ff;
+    color: white;
+    margin: 20px 0px;
+    
+    border: 1px solid transparent;
+    border-radius: 8px;
+
+
+}
+.ancher_div{
+    display: flex;
+    justify-content: center;
+}
+.danger{
+    color: #ff0000c7;
+    font-size: 18px;
+    font-weight: 600;
+}

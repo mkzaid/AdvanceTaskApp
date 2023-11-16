@@ -1,6 +1,6 @@
 import React from 'react'
 import TodoApp from '../components/TodoApp'
-import { useNavigate } from 'react-router-dom'
+import {Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 import './todoApp.css'
 const TodoAppPage = () => {
@@ -10,7 +10,8 @@ const TodoAppPage = () => {
 
         try{
             await signout()
-        }catch{
+        }catch(error){
+          console.log(error);
         }
         navigate("/login")
 
@@ -22,6 +23,9 @@ const TodoAppPage = () => {
      <button id='logOutBtn' onClick={handleLogOut} >
       Log Out
      </button>
+     <Link id='updateProfileBtn' to='/to-update-profile' >
+      Update Profile
+     </Link>
       </header>
        <TodoApp/>
     </div>

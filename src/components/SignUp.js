@@ -37,7 +37,7 @@ const SignUp = () => {
       return (
         <>
     
-    <Card>
+    {/* <Card>
     <h3 className='text-center' >SignUp</h3>
     
       <Card.Body>
@@ -63,8 +63,42 @@ const SignUp = () => {
     <div className='text-center mt-2 w-100' >
         Already have an account ? { <Link to='/login' >Log In</Link> }
         
-    </div>
-  
+    </div> */}
+  <div
+    className="parentContainer" 
+      >
+       <div>
+      <div className="Card" >
+        <h3 className="text-center">SignUp</h3>
+
+          {error && <p className="danger">{error}</p>}
+          <form>
+
+              <label>Email</label>
+              <input type="email" ref={emailRef} required />
+              <label>Password</label>
+              <input type="password" ref={passwordRef} required />
+              <label>Confirm Password</label>
+              <input type="password" ref={confPassRef} required />
+            
+          </form>
+          <button 
+            disabled={loading}
+            type="submit"
+            className="formBtn"
+            onClick={handleSubmit}
+          >
+            SignUp
+          </button>
+        {/* <div className="ancher_div" >
+          <a href="/forget-password"  >Forget Password</a>
+        </div> */}
+      </div>
+      <div className="ancher_div">
+      Already have an account ? <a href="/login">Log In</a>
+      </div>
+          </div>
+   </div>
     </>
   )
 }
